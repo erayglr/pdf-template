@@ -14,6 +14,9 @@ for index, row in df.iterrows():
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L",
              ln=1)
     pdf.line(10,21,200,21)
+
+    for i in range(row["Pages"]):
+        pdf.add_page()
 # ln 1 ise ondan sonra gelecek metni altına yazar 0 ise iç içe
 # recommends size = h
 # align yazının ne tarafa hizalanacağını gösterir
